@@ -1,0 +1,27 @@
+.step-block {
+  display: flex;
+  align-items: center;
+  flex-shrink: 1;
+}
+
+.step-block__number {
+  border-radius: 50%;
+  border: 1px solid #181871;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  width: 32px;
+  height: 32px;
+}
+
+.step-block__description {
+  font-size: 13px;
+  margin-left: 8px;
+}
+
+.step-block__number--compleated {
+  background-color: #181871;
+  color: #fff;
+}
