@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { CustomSelect } from '../../UI/CustomSelect/CustomSelect'
+import { Display } from '../../Display/Display'
 import './HumidityZone.css'
 
 const options = [
@@ -24,8 +25,7 @@ export const HumidityZone = () => {
         </div>
       </div>
       <div className="humidiate-zone__display">
-        Зона влажности для вашего
-        населённого пункта
+        <Display text={'Зона влажности для вашего населённого пункта'}/>
       </div>
     </div>
   )

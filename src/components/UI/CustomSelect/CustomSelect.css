@@ -1,0 +1,37 @@
+
+.custom-select__lable {
+  left: 10px;
+  pointer-events: none;
+  position: absolute;
+
+  top: 5px;
+  /* background-color: #e43333; */
+  z-index: 1;
+
+
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.custom-select .custom-select__control {
+  color: red !important;
+  /* font-size: 45px; */
+
+  padding-top: 20px;
+}
+
+
+.custom-select .custom-select__selected {
+  color: #181871;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.custom-select .custom-select__selected::after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background-image: url('./ok.svg');
+}

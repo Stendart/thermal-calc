@@ -5,6 +5,12 @@ import './Footer.css'
 import noticeIcon from './notice-icon.svg'
 
 export const Footer = () => {
+
+  const onClick = () => {
+    console.log('first')
+    // Делаю обработчик клика кнопок + начинаю верстку всплывающего notice
+  }
+
   return (
     <div className='footer'>
       <div className="footer__notice">
@@ -16,8 +22,8 @@ export const Footer = () => {
           
       </div>
       <div className="footer__change-btn">
-        <CustomButton type={BTN_TYPE_MAP.back} text='Назад' isDisabled={true} />
-        <CustomButton type={BTN_TYPE_MAP.continue} text='Далее' />
+        <CustomButton type={BTN_TYPE_MAP.back} text='Назад' isDisabled={true} onClick={onClick}/>
+        <CustomButton type={BTN_TYPE_MAP.continue} text='Далее' onClick={onClick} />
       </div>
     </div>
   )
