@@ -23,5 +23,10 @@
 
 .step-block__number--compleated {
   background-color: #181871;
+  color: #181871;
+}
+
+.step-block__number--current {
+  background-color: #181871;
   color: #fff;
 }

@@ -1,18 +1,22 @@
 import React from 'react'
 
 import { HumidityZone } from './HumidityZone/HumidityZone'
+import { HumidityRoom } from './HumidityRoom/HumidityRoom'
 
-export const StepDisplay = () => {
+const COMPONENT_MAP = new Map([
+  [0, HumidityZone],
+  [1, HumidityRoom]
+])
 
-  // Компоненты для каждого шага
-  // или передавать пропсами
-  // const curentStepComponent = '<div className="app__steps"></div>'; 
+export const StepDisplay = ({curStep}) => {
   
-  const getCurrentComponent = () => {
-    return HumidityZone
+  const getCurrentComponent = (curStep) => {
+
+    console.log('COMPONENT_MAP', COMPONENT_MAP)
+    return COMPONENT_MAP.get(curStep)
   }
 
-  const CurentStepComponent = getCurrentComponent();
+  const CurentStepComponent = getCurrentComponent(curStep);
 
   return (
     <div>

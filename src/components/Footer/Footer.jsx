@@ -4,11 +4,10 @@ import { CustomButton, BTN_TYPE_MAP } from '../UI/CustomButton/CustomButton'
 import './Footer.css'
 import noticeIcon from './notice-icon.svg'
 
-export const Footer = () => {
+export const Footer = ({curStep, changeStepHandler}) => {
 
-  const onClick = () => {
-    console.log('first')
-    // Делаю обработчик клика кнопок + начинаю верстку всплывающего notice
+  const clickHandler = (direction) => {
+    changeStepHandler(prevStep => prevStep + direction)
   }
 
   return (
@@ -22,8 +21,8 @@ export const Footer = () => {
           
       </div>
       <div className="footer__change-btn">
-        <CustomButton type={BTN_TYPE_MAP.back} text='Назад' isDisabled={true} onClick={onClick}/>
-        <CustomButton type={BTN_TYPE_MAP.continue} text='Далее' onClick={onClick} />
+        <CustomButton type={BTN_TYPE_MAP.back} text='Назад' isDisabled={curStep < 1} onClick={() => clickHandler(-1)}/>
+        <CustomButton type={BTN_TYPE_MAP.continue} text='Далее' onClick={() => clickHandler(1)} />
       </div>
     </div>
   )
