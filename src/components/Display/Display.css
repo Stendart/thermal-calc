@@ -24,3 +24,17 @@
 .display__value {
   margin: 0;
 }
+
+.display__notice-wrapper {
+  position: relative;
+}
+
+.display__notice {
+  position: absolute;
+  z-index: 2;
+  bottom: calc(100% + 10px);
+
+  width: 280px;
+
+  transform: translateX(-50%);
+}

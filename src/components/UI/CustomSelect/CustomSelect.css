@@ -14,10 +14,7 @@
 }
 
 .custom-select .custom-select__control {
-  color: red !important;
-  /* font-size: 45px; */
-
-  padding-top: 20px;
+  padding-top: 10px;
 }
 
 
@@ -27,6 +24,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.custom-select .custom-select__hover {
+  background-color: #fff;
+  color: #181871;
 }
 
 .custom-select .custom-select__selected::after {

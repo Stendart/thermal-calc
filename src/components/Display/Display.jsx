@@ -1,6 +1,7 @@
 import React from 'react'
 
-import notice from './notice.svg'
+import { Notice } from '../Notice/Notice'
+
 import './Display.css'
 
 export const Display = (props) => {
@@ -13,7 +14,14 @@ export const Display = (props) => {
         <p className="display__value">
           —
         </p>
-        <img className="display__notice" src={notice} alt=''/>
+        <div className="display__notice-wrapper">
+          {/* <div className="display__notice">
+            <Notice />
+          </div>
+          <img className="display__notice-img" src={notice} alt=''/> */}
+          <Notice />
+        </div>
+        
       </div>
         
     </div>

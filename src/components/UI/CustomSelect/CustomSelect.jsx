@@ -6,42 +6,46 @@ import './CustomSelect.css'
 
 
 const Control = (props) => {
-  console.log('props', props)
   return (
     <>
-      {/* <Label isFloating={props.isFocused || props.hasValue}>Select</Label> */}
-      <label className='custom-select__lable'> Select </label>
+      {
+        props.hasValue ? <label className='custom-select__lable'> { props.lable } </label> : null
+      }
+      
       <components.Control {...props} />
     </>
   );
 };
 
-// const Label = (props) => {
-  
-//   return (
-//     <label className='custom-select__lable'> { props.children } </label>
-//   )
-// }
-
-
-
 export const CustomSelect = (props) => {
 
-  // делаю что бы селект текст был ниже
-  // добавить текст на плейсхолдер
+  const getOptionClassList = (state) => {
+    let classList = ''
+
+    if (state.isSelected) {
+      classList += ' custom-select__selected'
+    }
+    if (state.isFocused) {
+      classList += ' custom-select__hover'
+    }
+
+    return classList
+  }
 
   return (
     <Select options={props.options} 
       className='custom-select'
+      placeholder={'custom text'}
       components={{
         IndicatorSeparator: () => null,
-        Control
+        Control: (props) => <Control {...props} lable='text' />
       }}
       // styles={colourStyles}
       classNames={{
-        control: (state) => 'custom-select__control',
-        option: (state) =>
-          state.isSelected ? 'custom-select__selected' : '',
+        control: (state) => 
+          state.hasValue ? 'custom-select__control' : '',
+        option: (state) => getOptionClassList(state),
+
       }}
     />
   )
