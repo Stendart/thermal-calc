@@ -2,11 +2,13 @@ import React from 'react'
 
 import { HumidityZone } from './HumidityZone/HumidityZone'
 import { HumidityRoom } from './HumidityRoom/HumidityRoom'
+import { WallsCharacteristics } from './WallsCharacteristics/WallsCharacteristics'
 
 
 const COMPONENT_MAP = {
   0: HumidityZone,
-  1: HumidityRoom
+  1: HumidityRoom,
+  2: WallsCharacteristics
 }
 
 

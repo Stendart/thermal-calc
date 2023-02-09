@@ -8,8 +8,8 @@ export const HumidityTable = () => {
     <table className='humidity-table'>
       <thead className='humidity-table__head'>
         <tr>
-          <th className='humidity-table__cell' rowspan="2">Режим</th>
-          <th className='humidity-table__cell' colspan='3'>Влажность внутреннего воздуха, %, при температуре, °С</th>
+          <th className='humidity-table__cell' rowSpan="2">Режим</th>
+          <th className='humidity-table__cell' colSpan='3'>Влажность внутреннего воздуха, %, при температуре, °С</th>
         </tr>
         <tr>
           <th className='humidity-table__cell'>до 12</th>
@@ -20,7 +20,7 @@ export const HumidityTable = () => {
       <tbody className='humidity-table__body'>
         { 
           tableData.map(row => (
-            <tr> 
+            <tr key={row.mode}> 
               <td className='humidity-table__cell'>{ row.mode }</td>
               <td className='humidity-table__cell'>{ row.t1 }</td>
               <td className='humidity-table__cell'>{ row.t2 }</td>
