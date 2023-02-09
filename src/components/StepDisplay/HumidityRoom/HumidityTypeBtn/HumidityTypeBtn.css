@@ -1,0 +1,22 @@
+.humidity-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+  padding: 25px 47px;
+
+  background: #FAFAFA;
+  border-radius: 6px;
+}
+
+.humidity-btn--selected {
+  color: #181871;
+  border-color: #181871;
+}
+
+.humidity-btn--selected path{
+  fill: #181871;
+}

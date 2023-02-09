@@ -14,13 +14,18 @@ export const Display = (props) => {
         <p className="display__value">
           —
         </p>
-        <div className="display__notice-wrapper">
-          {/* <div className="display__notice">
-            <Notice />
-          </div>
-          <img className="display__notice-img" src={notice} alt=''/> */}
-          <Notice />
-        </div>
+        {/* <div className="display__notice-wrapper"> */}
+          <Notice>
+            <div className="display__notice-wrapper">
+              Зона влажности — один из параметров, который учитывается при расчёте утеплителя. 
+              Это территория со схожими влажностными характеристиками.
+              <div className="display__notice-info">
+                Обозначается цифрами от 1 до 3
+              </div>
+              Чем выше цифра — тем суше зона.  
+            </div>
+          </Notice>
+        {/* </div> */}
         
       </div>
         

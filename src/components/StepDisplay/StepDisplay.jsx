@@ -3,17 +3,26 @@ import React from 'react'
 import { HumidityZone } from './HumidityZone/HumidityZone'
 import { HumidityRoom } from './HumidityRoom/HumidityRoom'
 
-const COMPONENT_MAP = new Map([
-  [0, HumidityZone],
-  [1, HumidityRoom]
-])
+
+const COMPONENT_MAP = {
+  0: HumidityZone,
+  1: HumidityRoom
+}
+
 
 export const StepDisplay = ({curStep}) => {
   
   const getCurrentComponent = (curStep) => {
+    const mapLenght = Object.keys(COMPONENT_MAP).length;
 
-    console.log('COMPONENT_MAP', COMPONENT_MAP)
-    return COMPONENT_MAP.get(curStep)
+    if(curStep >= mapLenght) {
+      return COMPONENT_MAP[mapLenght - 1]
+    }
+    if(curStep < 0) {
+      return COMPONENT_MAP[0]
+    }
+    return COMPONENT_MAP[curStep]
+    
   }
 
   const CurentStepComponent = getCurrentComponent(curStep);

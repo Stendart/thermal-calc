@@ -25,9 +25,9 @@
   margin: 0;
 }
 
-.display__notice-wrapper {
+/* .display__notice-wrapper {
   position: relative;
-}
+} */
 
 .display__notice {
   position: absolute;
@@ -37,4 +37,14 @@
   width: 280px;
 
   transform: translateX(-50%);
+}
+
+.display__notice-info {
+  color: #181871;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.display__notice-wrapper {
+  width: 280px;
 }
