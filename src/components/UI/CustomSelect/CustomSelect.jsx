@@ -43,9 +43,10 @@ export const CustomSelect = (props) => {
       // styles={colourStyles}
       classNames={{
         control: (state) => 
-          state.hasValue ? 'custom-select__control' : '',
+          state.hasValue ? 'custom-select__control custom-select__control--value' : 'custom-select__control',
         option: (state) => getOptionClassList(state),
-
+        valueContainer: (state) =>
+          state.hasValue ? 'custom-select__value' : ''
       }}
     />
   )

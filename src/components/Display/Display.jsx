@@ -6,7 +6,7 @@ import './Display.css'
 
 export const Display = (props) => {
   return (
-    <div className='display'>
+    <div className={'display ' + (props.className ?? '')}>
       <div className="display__text">
         {props.text}
       </div>
@@ -14,19 +14,8 @@ export const Display = (props) => {
         <p className="display__value">
           —
         </p>
-        {/* <div className="display__notice-wrapper"> */}
-          <Notice>
-            <div className="display__notice-wrapper">
-              Зона влажности — один из параметров, который учитывается при расчёте утеплителя. 
-              Это территория со схожими влажностными характеристиками.
-              <div className="display__notice-info">
-                Обозначается цифрами от 1 до 3
-              </div>
-              Чем выше цифра — тем суше зона.  
-            </div>
-          </Notice>
-        {/* </div> */}
-        
+          {/* for notice block */}
+          { props.children }
       </div>
         
     </div>
