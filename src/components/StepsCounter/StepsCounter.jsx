@@ -3,9 +3,9 @@ import React from 'react'
 import { StepBlock } from '../StepBlock/StepBlock'
 import './StepsCounter.css'
 
-import { stepData } from '../../mock-data'
+// import { stepData } from '../../mock-data'
 
-export const StepsCounter = ({curStep}) => {
+export const StepsCounter = ({curStep, stepData}) => {
 
   const prepareData = stepData.map((step, index) => {
     if (index < curStep) {
@@ -19,7 +19,7 @@ export const StepsCounter = ({curStep}) => {
     }
   })
 
-  console.log('stepData', stepData)
+  // console.log('stepData', stepData)
 
   return (
     <div className='steep-counter'>

@@ -17,11 +17,15 @@
   align-items: stretch;
 }
 
-.humidity-room__button {
+.humidity-room__button-wrapper {
   width: 100%;
 }
 
-.humidity-room__button:not(:first-child) {
+.humidity-room__button {
+  padding: 25px 47px;
+}
+
+.humidity-room__button-wrapper:not(:first-child) {
   margin-left: 10px;
 }
 

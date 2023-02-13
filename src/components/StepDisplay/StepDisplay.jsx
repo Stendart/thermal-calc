@@ -3,12 +3,19 @@ import React from 'react'
 import { HumidityZone } from './HumidityZone/HumidityZone'
 import { HumidityRoom } from './HumidityRoom/HumidityRoom'
 import { WallsCharacteristics } from './WallsCharacteristics/WallsCharacteristics'
+import { Brand } from './Brand/Brand'
+
+// ToDo
+// Доделать ховеры и фокусы на UI элементах 
+//+ в переключении шагов галочку 
+//+ ограничить переключение на уровне блокировки кнопок
 
 
 const COMPONENT_MAP = {
   0: HumidityZone,
   1: HumidityRoom,
-  2: WallsCharacteristics
+  2: WallsCharacteristics,
+  3: Brand
 }
 
 

@@ -7,7 +7,7 @@ import './Display.css'
 export const Display = (props) => {
   return (
     <div className={'display ' + (props.className ?? '')}>
-      <div className="display__text">
+      <div className={'display__text ' + (props.className ? `${props.className}-text` : '') }>
         {props.text}
       </div>
       <div className="display__wrapper">
