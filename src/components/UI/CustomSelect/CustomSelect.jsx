@@ -32,10 +32,15 @@ export const CustomSelect = (props) => {
     return classList
   }
 
+  const setChoice = (choice) => {
+    props.onChange(choice);
+  }
+
   return (
     <Select options={props.options} 
       className='custom-select'
       placeholder={'custom text'}
+      onChange={(choice) => setChoice(choice)}
       components={{
         IndicatorSeparator: () => null,
         Control: (props) => <Control {...props} lable='text' />

@@ -11,15 +11,17 @@ import { Brand } from './Brand/Brand'
 //+ ограничить переключение на уровне блокировки кнопок
 
 
-const COMPONENT_MAP = {
-  0: HumidityZone,
-  1: HumidityRoom,
-  2: WallsCharacteristics,
-  3: Brand
-}
 
 
-export const StepDisplay = ({curStep}) => {
+
+export const StepDisplay = ({curStep, humidityData}) => {
+
+  const COMPONENT_MAP = {
+    0: <HumidityZone humidityData={humidityData}/>,
+    1: <HumidityRoom />,
+    2: <WallsCharacteristics />,
+    3: <Brand />
+  }
   
   const getCurrentComponent = (curStep) => {
     const mapLenght = Object.keys(COMPONENT_MAP).length;
@@ -38,7 +40,8 @@ export const StepDisplay = ({curStep}) => {
 
   return (
     <div>
-      <CurentStepComponent />
+      {/* <CurentStepComponent /> */}
+      {CurentStepComponent }
     </div>
   )
 }
